@@ -1,23 +1,23 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Tasks
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header class="ion-no-border" collapse="condense">
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-button (click)="addTodo()">
-          <ion-icon name="help-circle"></ion-icon>
+          <ion-icon size="large" name="help-circle"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title size="medium">Tasks</ion-title>
+      <ion-title  class="size" color="primary">Tasks</ion-title>
       <ion-buttons slot="end">
         <ion-button (click)="addTodo()">
-          <ion-icon name="add-circle"></ion-icon>
+          <ion-icon size="large" name="add-circle"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
