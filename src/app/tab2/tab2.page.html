@@ -24,7 +24,7 @@
   </ion-header>
 
   <ion-list lines="none">
-    <ion-item *ngFor="let todo of todos" (click)="editTodo(todo)">
+    <ion-item *ngFor="let todo of dataService.todos" (click)="editTodo(todo)">
       <ion-label>{{todo.title}}</ion-label>
     </ion-item> </ion-list>
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->

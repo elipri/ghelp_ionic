@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
-  public todos: Array<{title:string, description:string}>=[];
-  constructor(private navCtrl: NavController) {
-    this.todos.push(
+export class Tab2Page implements OnInit {
+  //public todos: Array<{title:string, description:string}>=[];
+  constructor(private navCtrl: NavController, private dataService: DataService) {
+    /* this.todos.push(
       {title:'Esimene todo', description:'See on esimene todo.'},
       {title:'Teine todo', description:'See on teine todo.'},
       {title:'Kolmas todo', description:'See on kolmas todo.'}
-    );
+    ); */
+  }
+
+  ngOnInit() {
+    this.dataService.load();
   }
 
   openHelp() {
