@@ -3,8 +3,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 60%;
-  transform: translateY(-60%);
+  top: 65%;
+  transform: translateY(-65%);
 }
 
 .container p {
@@ -15,7 +15,8 @@
 }
 
 .container span {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 2.5rem;
   color: #8c8c8c;
   margin: 0;
 }
@@ -26,6 +27,7 @@
   left: 0;
   right: 0;
   top: 25%;
+  margin-left: -10px;
 }
 
 .weather span {
