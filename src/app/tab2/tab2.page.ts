@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+import { Task } from '../models/task';
 
 @Component({
   selector: 'app-tab2',
@@ -8,6 +9,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
+  //DATA IS NOW MOVED TO DATA SERVICE!
   //public todos: Array<{title:string, description:string}>=[];
   constructor(private navCtrl: NavController, private dataService: DataService) {
     /* this.todos.push(
@@ -31,7 +33,7 @@ export class Tab2Page implements OnInit {
   }
   editTodo(todo) {
     //console.log('blah-blah');
-    this.navCtrl.navigateForward(['/task-edit', {id: todo.title}]);
+    this.navCtrl.navigateForward(['/task-edit', {id: todo.id}]);
   }
 
 }
