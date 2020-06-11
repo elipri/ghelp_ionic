@@ -17,4 +17,12 @@ export class Tab3Page {
     this.navCtrl.navigateForward('/help');
   }
 
+  openPlant() {
+    this.navCtrl.navigateForward('/plant');
+  }
+
+  editPlant() {
+    //console.log('do something');
+  }
+
 }

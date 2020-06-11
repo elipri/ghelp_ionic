@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-task-edit',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskEditPage implements OnInit {
   private todo: {title:string, description:string};
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.todo = {
       title:'',
       description:''
@@ -16,6 +17,8 @@ export class TaskEditPage implements OnInit {
 
    //angular lifecycle method
   ngOnInit() {
+    const identifier = this.route.snapshot.paramMap.get('id');
+    console.log('Edit Todo: ' + identifier);
   }
 
   save() {
