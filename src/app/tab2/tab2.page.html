@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Tasks
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header class="ion-no-border" collapse="condense">
     <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="addTodo()">
+          <ion-icon name="help-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
       <ion-title size="medium">Tasks</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="addTodo()">
+          <ion-icon name="add-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list lines="none">
+    <ion-item *ngFor="let todo of todos" (click)="editTodo(todo)">
+      <ion-label>{{todo.title}}</ion-label>
+    </ion-item> </ion-list>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>
