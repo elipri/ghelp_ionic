@@ -17,7 +17,17 @@ export class DataService {
     );
   }
 
+  get(id) {
+    return this.todos.filter(x=> x.title === id)[0];
+  }
+
   save(todo) {
     console.log('saving data');
+    const index = this.todos.indexOf(todo);
+    if (index === -1) {
+      this.todos.push(todo);
+    } else {
+      this.todos[index] = todo;
+    }
   }
 }
