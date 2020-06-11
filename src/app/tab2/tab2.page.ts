@@ -16,6 +16,9 @@ export class Tab2Page {
     );
   }
 
+  openHelp() {
+    this.navCtrl.navigateForward('/help');
+  }
   addTodo() {
     //console.log('blah');
     //moving to task-edit page

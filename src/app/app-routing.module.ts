@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'task-edit/:id',
     loadChildren: () => import('./task-edit/task-edit.module').then( m => m.TaskEditPageModule) 
+  },
+  {
+    path: 'help',
+    loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
   }
 ];
 @NgModule({
