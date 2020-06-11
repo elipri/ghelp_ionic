@@ -1,31 +1,43 @@
 .container {
-    text-align: center !important;
-  
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  text-align: center !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  transform: translateY(-60%);
+}
 
-  .container p {
-    font-size: 1.3rem;
-    line-height: 22px;
-  
-    color: #8c8c8c;
-  
-    margin: 0;
-  }
+.container p {
+  font-size: 1.3rem;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
 
-  .container span {
-      font-size: 1.1rem;
-      color: #8c8c8c;
-        margin: 0;
-  }
+.container span {
+  font-size: 1.1rem;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.weather {
+  text-align: center !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+}
+
+.weather span {
+  height: 150px;
+  width: 150px;
+  background-color: #ffc7c8;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 .size {
-    //font-size: larger;
-    font-size: 1.6rem;
-    font-family: 'Lato';      
-} 
-
+  //font-size: larger;
+  font-size: 1.6rem;
+  font-family: "Lato";
+}
