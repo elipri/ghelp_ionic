@@ -37,21 +37,55 @@ export class DataService {
   }
 
   get(id: number): Task {
-    return this.todos.filter(x=> x.id === id)[0];
+    return this.todos.filter(x => x.id === id)[0];
   }
 
-  getMaxId(): number {
+  delete(todo: Task) {
     if (this.todos != null) {
-      return Math.max.apply(Math, this.todos.map(o => o.id));
+      console.log('Delete todo: ' + todo.id);
+      const index = this.getIndex(todo.id);
+
+      if (index !== -1) {
+        this.todos.splice(index, 1);
+        this.saveTodos();
+      }
     }
-    return -1;
+  }
+
+  saveTodos() {
+    this.storage.set('todos', this.todos);
+  }
+
+  getAll() {
+    var promise = new Promise((resolve, reject) => {
+      this.storage.forEach((value, key, index) => {
+        this.todos.push(value);
+      }).then((d) => {
+        resolve(this.todos);
+      });
+    });
+    return promise;
+  }
+
+  deleteAll() {
+    this.storage.clear();
+  }
+
+
+  getMaxId(): number {
+    if (this.todos != null && this.todos.length > 0) {
+      return Math.max(0, Math.max.apply(Math, this.todos.map(function(o) { return o.id; })));
+    }
+
+    return 0;
   }
 
   save(todo: Task) {
     //console.log('saving data');
-    const index = this.todos.indexOf(todo);
+    //const index = this.todos.indexOf(todo);
+    console.log(todo);
     if (todo !== null) {
-      //id ID has not yet been generated, assign it
+      //if ID has not yet been generated, assign it
       if(todo.id === 0 || todo.id == null) {
         const newId = this.getMaxId() + 1;
         todo.id = newId;

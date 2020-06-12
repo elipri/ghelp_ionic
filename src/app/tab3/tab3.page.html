@@ -16,7 +16,7 @@
       </ion-buttons>
       <ion-title class="size" color="primary">Plants</ion-title>
       <ion-buttons slot="end">
-        <ion-button>
+        <ion-button (click)="openPlant()">
           <ion-icon size="large" name="add-circle"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -29,5 +29,16 @@
       <ion-text>Go to plant page</ion-text>
     </ion-button>
   </ion-buttons>
+
+  <!-- <ion-item>
+    <ion-label>Place</ion-label>
+    <ion-select value="all" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="all">Brown</ion-select-option>
+      <ion-select-option value="patio">Blonde</ion-select-option>
+      <ion-select-option value="greenhouse">Black</ion-select-option>
+      <ion-select-option value="front yard">Red</ion-select-option>
+    </ion-select>
+  </ion-item> -->
+  
   <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>

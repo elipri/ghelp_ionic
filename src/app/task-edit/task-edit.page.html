@@ -19,5 +19,15 @@
       <ion-input [(ngModel)]="todo.description" type="text"></ion-input> </ion-item>
     </ion-list>
     <ion-button expand="full" (click)="save()">Save</ion-button>
+    <ion-button expand="full" (click)="delete()">Delete</ion-button>
+
+
+    <ion-button (click)="deleteAll()">
+      Delete all
+    </ion-button>
+
+    <ion-button (click)="getAll()">
+      Get all
+    </ion-button>
 
 </ion-content>

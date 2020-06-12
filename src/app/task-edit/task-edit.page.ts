@@ -23,19 +23,39 @@ export class TaskEditPage implements OnInit {
 
    //angular lifecycle method
   ngOnInit() {
-    const identifier = this.route.snapshot.paramMap.get('id');
-    //console.log('Edit Todo: ' + identifier);
+    var identifier = this.route.snapshot.paramMap.get('id');
+    console.log('Edit Todo: ' + identifier);
+    
     if (identifier != null) {
+      console.log(identifier);
       const item =  this.dataService.get(parseInt(identifier, 10));
       /* this.todo = JSON.parse(JSON.stringify(this.dataService.get(identifier))); */
-      this.todo = JSON.parse(JSON.stringify(item));
-    }
+      const str = JSON.stringify(item);
+      this.todo = JSON.parse(str);
+
+      
+    } 
   }
 
   save() {
     //console.log('Saving todo');
     this.dataService.save(this.todo);
     this.navCtrl.navigateBack('/tabs/tab2');
+  }
+
+  delete() {
+    //console.log('Saving todo');
+    this.dataService.delete(this.todo);
+    this.navCtrl.navigateBack('/tabs/tab2');
+  }
+
+  deleteAll() {
+    this.dataService.deleteAll();
+    console.log('Deleted all entries, refresh browser');
+  }
+
+  getAll() {
+    console.log(this.dataService.getAll());
   }
 
 }

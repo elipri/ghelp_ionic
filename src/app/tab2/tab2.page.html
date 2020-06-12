@@ -26,6 +26,16 @@
   <ion-list lines="none">
     <ion-item *ngFor="let todo of dataService.todos" (click)="editTodo(todo)">
       <ion-label>{{todo.title}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="todo.isChecked"></ion-checkbox>
     </ion-item> </ion-list>
+
+
+    <ion-button (click)="deleteAll()">
+      Delete all
+    </ion-button>
+
+    <ion-button (click)="getAll()">
+      Get all
+    </ion-button>
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>
