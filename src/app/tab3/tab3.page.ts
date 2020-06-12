@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { __classPrivateFieldSet } from 'tslib';
 
 @Component({
   selector: 'app-tab3',
@@ -7,7 +8,8 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
+  public arr =['item', 'item2', 'item3'];
+  public hideMe = false;
   constructor(private navCtrl: NavController) {
 
   }
@@ -24,5 +26,18 @@ export class Tab3Page {
   editPlant() {
     //console.log('do something');
   }
+
+  /* changeStyle() {
+    if(document.getElementById("cards").classList.contains("ion-hide")){
+      document.getElementById("cards").classList.remove("ion-hide");
+    } else {
+      document.getElementById("cards").className = "ion-hide";
+    }  
+  } */
+
+  hide() {
+    this.hideMe = !this.hideMe;
+  }
+
 
 }

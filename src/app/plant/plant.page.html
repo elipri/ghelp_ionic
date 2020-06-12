@@ -9,7 +9,13 @@
 </ion-header>
 
 <ion-content>
- This is a plant view page
+ This is a plant add page
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button (click)="photoService.addNewToGallery()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 
 

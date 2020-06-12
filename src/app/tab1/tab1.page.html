@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       GardenHelper
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true" class="ion-no-border">
   <ion-header class="ion-no-border" collapse="condense">
@@ -13,19 +13,23 @@
     </ion-toolbar>
   </ion-header>
 
+  
+
   <ion-item lines="none" class="weather">
     <span style="margin: 0 auto">
       <span style="margin-top: 1rem; width: 5rem; height:5rem;"><ion-img src="assets/img/weather2.png"></ion-img></span>
       <br>
-      <ion-text>16°</ion-text> 
+      <ion-text>{{weather.main.temp | number:'1.0-0'}}°</ion-text> 
     </span>
   </ion-item>
-
+  
   <ion-text lines="none" class='container'>
     
     <p>Hello!</p>
     <span>Time to get busy in your garden!</span>
   </ion-text>
 
+  <!-- <ion-button (click)="getWeather()">Weather</ion-button> -->
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+
 </ion-content>

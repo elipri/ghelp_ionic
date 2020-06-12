@@ -3,3 +3,24 @@
     font-size: 1.6rem;
     font-family: 'Lato';      
 }
+
+.card {
+    width: 40%;
+    height: 10rem;
+    display: inline-block;
+}
+
+.plantimg {
+    width: 3rem;
+    height: 3rem;
+    background-color: red($color: #000000);
+    border: 1px black;
+}
+
+.small {
+    font-size: 0.7rem;
+}
+
+.filter {
+    padding-right: 2rem;
+}

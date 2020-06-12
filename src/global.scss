@@ -52,3 +52,9 @@
     --ion-color-shade: var(--ion-color-green-shade);
     --ion-color-tint: var(--ion-color-green-tint);
   }
+
+  ion-checkbox {
+    --border-radius: 10%;
+    --checkmark-color: #fff;
+    --border-color: #4DB6AC;
+  }

@@ -1,12 +1,12 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Plants
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header class="ion-no-border" collapse="condense">
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -24,11 +24,15 @@
   </ion-header>
 
 
-  <ion-buttons>
+  <!-- <ion-buttons>
     <ion-button (click)="openPlant()">
       <ion-text>Go to plant page</ion-text>
     </ion-button>
-  </ion-buttons>
+  </ion-buttons> -->
+<div style="width: 80%; margin:auto; padding: 0;">
+  
+</div>
+  
 
   <!-- <ion-item>
     <ion-label>Place</ion-label>
@@ -39,6 +43,42 @@
       <ion-select-option value="front yard">Red</ion-select-option>
     </ion-select>
   </ion-item> -->
+
+
+  <!-- <ion-grid *ngIf="hideMe"> -->
+  <ion-grid>
+    <ion-row no-padding>
+      <ion-col class="ion-align-self-center">
+        <ion-list style="width: 95%;">
+        
+          <ion-item class="small">
+            <span class="filter">Filter by place:</span>
+            <ion-label>Places</ion-label>
+            <ion-select [(ngModel)]="places">
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col col-6 sizeXs="6" *ngFor="let a of arr">
+        <ion-card >
+          <span><img>.</span>
+          <ion-card-header>
+            <ion-card-subtitle>{{a}}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            
+          </ion-card-content>
+        </ion-card>      
+        
+      </ion-col>
+    </ion-row>
+</ion-grid>
+
+<!-- <ion-button (click)="hide()">Hide</ion-button> -->
   
+
   <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
