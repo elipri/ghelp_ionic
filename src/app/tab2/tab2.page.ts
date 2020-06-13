@@ -12,12 +12,6 @@ export class Tab2Page implements OnInit {
   //DATA IS NOW MOVED TO DATA SERVICE!
   //public todos: Array<{title:string, description:string}>=[];
 
-  public form = [
-    /* { val: 'Pepperoni', isChecked: true },
-    { val: 'Sausage', isChecked: false },
-    { val: 'Mushroom', isChecked: false } */
-  ];
-
   constructor(private navCtrl: NavController, private dataService: DataService) {
     /* this.todos.push(
       {title:'Esimene todo', description:'See on esimene todo.'},

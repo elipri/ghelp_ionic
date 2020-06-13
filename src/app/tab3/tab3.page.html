@@ -1,13 +1,13 @@
-<!-- <ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
+    <ion-title color="primary">
       Plants
     </ion-title>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content [fullscreen]="true" >
-  <ion-header class="ion-no-border" collapse="condense">
+  <ion-header class="ion-no-border" style="margin-top: -1rem;" collapse="condense">
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-button (click)="openHelp()">
@@ -60,11 +60,12 @@
         </ion-list>
       </ion-col>
     </ion-row>
-    <ion-row no-padding>
-      <ion-col col-6 sizeXs="6" *ngFor="let a of arr">
-        <ion-card >
-          <span><img>.</span>
-          <ion-card-header>
+    <ion-row no-padding >
+      <ion-col col-6 sizeXs="6" sizeSm="3"style="margin-bottom: -1rem;" *ngFor="let a of arr">
+        <ion-card style="height:9rem;">
+          <!-- <ion-item class="plant"></ion-item> -->
+          <img src="../../assets/img/plant-with-leaves.png"/>
+          <ion-card-header no-padding>
             <ion-card-subtitle>{{a}}</ion-card-subtitle>
           </ion-card-header>
         
