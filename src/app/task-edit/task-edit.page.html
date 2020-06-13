@@ -1,33 +1,35 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/tab2" text="" icon="chevron-back-circle"></ion-back-button>
+      <ion-back-button
+        defaultHref="/tabs/tab2"
+        text=""
+        icon="chevron-back-circle"
+      ></ion-back-button>
     </ion-buttons>
     <!-- <ion-title>TaskEdit</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-
-  <ion-list> 
+  <ion-list>
     <ion-item>
       <ion-label position="floating">Task</ion-label>
-      <ion-input [(ngModel)]="todo.title" type="text"></ion-input> </ion-item>
+      <ion-input [(ngModel)]="todo.title" type="text"></ion-input>
+    </ion-item>
     <ion-item>
       <ion-label position="floating">Description</ion-label>
-      <ion-input [(ngModel)]="todo.description" type="text"></ion-input> </ion-item>
-    </ion-list>
-    <ion-button expand="full" (click)="save()">Save</ion-button>
-    <ion-button expand="full" (click)="delete()">Delete</ion-button>
+      <ion-input [(ngModel)]="todo.description" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="save()">Save</ion-button>
+  <ion-button expand="full" (click)="delete()">Delete</ion-button>
 
-
-    <!-- <ion-button (click)="deleteAll()">
+  <!-- <ion-button (click)="deleteAll()">
       Delete all
     </ion-button>
 
     <ion-button (click)="getAll()">
       Get all
     </ion-button> -->
-
 </ion-content>

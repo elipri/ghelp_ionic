@@ -19,7 +19,7 @@
     <span style="margin: 0 auto">
       <span style="margin-top: 1rem; width: 5rem; height:5rem;"><ion-img src="assets/img/weather2.png"></ion-img></span>
       <br>
-      <!-- <ion-text>{{weather.main.temp | number:'1.0-0'}}°</ion-text>  -->
+      <ion-text *ngIf="weather">{{weather.main.temp | number:'1.0-0'}}°</ion-text> 
     </span>
   </ion-item>
   

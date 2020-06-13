@@ -8,7 +8,17 @@ import { __classPrivateFieldSet } from 'tslib';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  public arr =['item', 'item2', 'item3','item', 'item2', 'item3','item', 'item2', 'item3'];
+  public arr =[
+    'Plant1', 
+    'Plant2', 
+    'Plant3',
+    'Plant4', 
+    'Plant5', 
+    'Plant6',
+    'Plant7', 
+    'Plant8', 
+    'Plant9'
+  ];
   public hideMe = false;
   constructor(private navCtrl: NavController) {
 
