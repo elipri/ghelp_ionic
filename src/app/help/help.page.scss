@@ -1,0 +1,31 @@
+.outerc {
+  position: absolute;
+  top: 20%;
+}
+
+.innerc {
+  width: 80%;
+  margin: auto;
+}
+
+ion-text {
+  font-family: "Lato";
+  font-size: smaller;
+}
+
+.fun {
+  height: 120px;
+  width: 120px;
+  --background: #4db6ac;
+  --border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  --color: white;
+  --ion-color-contrast: white !important;
+  --ion-color-base: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato";
+  font-size: medium;
+}

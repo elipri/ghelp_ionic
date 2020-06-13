@@ -1,12 +1,32 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <!-- <ion-title>Help</ion-title> -->
-    <ion-buttons slot="start">
-      <ion-back-button text="" icon="chevron-back-circle"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <!-- <ion-title>Help</ion-title> -->
+      <ion-buttons slot="start">
+        <ion-back-button
+          text=""
+          defaultHref="/tabs/tab1"
+          icon="chevron-back-circle"
+        ></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div class="outerc">
+    <div class="innerc">
+      <ion-text>
+        To add a new task or a new plant, simply click on the plus sign. <br><br>Tasks
+        do not require a description, but you can add it if you wish to do so.
+        Clicking on a task will show you the description (if there is one). <br><br>Any
+        new plant has to have a name and a place where it resides. You can pick
+        a place from a list or type in a new one. You can also add a photo and a
+        description (but these are not required).
+      </ion-text>
+      <div style="text-align: center; padding-top: 2rem;">
+        <ion-back-button color="primary" class="fun" defaultHref="/tabs/tab1" text="Have fun! :)" icon=""></ion-back-button>
+        <!-- <div class="fun">Have fun!</div> -->
+      </div>
+    </div>
+  </div>
 
-<ion-content>
-This is help page
+  <ion-text> </ion-text>
 </ion-content>
