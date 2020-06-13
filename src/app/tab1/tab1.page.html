@@ -15,11 +15,13 @@
 
   
 
-  <ion-item lines="none" class="weather">
+  <ion-item *ngIf="weather" lines="none" class="weather">
     <span style="margin: 0 auto">
-      <span style="margin-top: 1rem; width: 5rem; height:5rem;"><ion-img src="assets/img/weather2.png"></ion-img></span>
+      <span style="margin-top: 1rem; width: 5rem; height:5rem;">
+        <img [src]="'http://openweathermap.org/img/wn/'+weather.list[0].weather[0].icon+'@4x.png'" />
+      </span>
       <br>
-      <ion-text *ngIf="weather">{{weather.main.temp | number:'1.0-0'}}°</ion-text> 
+      <ion-text *ngIf="weather">{{weather.list[0].main.temp | number:'1.0-0'}}°</ion-text> 
     </span>
   </ion-item>
   
@@ -28,6 +30,10 @@
     <p>Hello!</p>
     <span>Time to get busy in your garden!</span>
   </ion-text>
+
+  <!-- <ion-button (click)="getGeo()" expand="block">
+    Get Location
+  </ion-button> -->
 
   <!-- <ion-button (click)="getWeather()">Weather</ion-button> -->
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
